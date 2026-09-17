@@ -1,4 +1,4 @@
-# DWeb Workshop Resources
+# Dark Prague Workshop Resources
 
 Bandwidth will be limited during the workshop. Install the tools and start these downloads early.
 
@@ -18,8 +18,8 @@ Runs the local testnet and Homeserver.
 - Docs: https://pubky.org/explore/technologies/pubky-docker/
 
 ```bash
-git clone https://github.com/pubky/pubky-docker.git
-(cd pubky-docker && cp .env-sample .env && docker compose pull --include-deps homeserver)
+git clone https://github.com/pubky/pubky-docker.git && cd pubky-docker && cp .env-sample .env
+docker compose up homeserver -d
 ```
 
 Do this as early as possible. This is the largest shared download.
@@ -27,23 +27,47 @@ Do this as early as possible. This is the largest shared download.
 ### 2. Download App Templates
 
 ```bash
-npx tiged pubky/pubky-app-templates/vite-starter pubky-hello-world
-(cd pubky-hello-world && npm install && npm install @synonymdev/pubky)
-
 npx tiged pubky/pubky-app-templates/basic-pubky-app my-pubky-app
 (cd my-pubky-app && npm install)
-
-npx tiged pubky/pubky-app-templates/pubky-signer-app pubky-signer-app
-(cd pubky-signer-app && npm install)
 ```
 
-## Development Guide
+The template already implements login & basic file operations. It can store private and public data.
 
-When we reach the hands-on part of the presentation, we will use this guide:
+Run it with `npm run dev`.
 
-https://pubky.org/explore/pubkycore/getting-started/
+Use the Pubky Ring Simulator to manage your identity: https://simulator.pubkyring.app/
 
-We will only follow steps 1-3. The rest of the guide is not accurate for this workshop.
+
+## AI Development
+
+Best to use your AI agent to build a small app. For example:
+
+```
+This is an example app that provides login and file read/write. I want to turn this into a photo library. Propose how to do this. Feel free to ask clarifying questions.
+```
+
+Then add this small section to give your AI all the information it needs to build on Pubky:
+
+```
+Pubky: open protocol for key-based, censorship-resistant web apps. Public key identity, homeserver storage, Mainline DHT discovery over HTTP/REST.
+
+Fetch the docs and help me build with Pubky:
+- Full (~110k tokens): https://pubky.org/llms-full.txt
+- Compact (~6k tokens): https://pubky.org/llms-small.txt
+```
+
+### Local Signer / Identity Manager
+
+Identities / User Accounts are managed by a signer. Use the Pubky Ring simulator to create identities and authorize applications
+
+https://simulator.pubkyring.app/
+
+## Manual Development
+
+Checkout this guide:
+
+https://pubky.org/explore/pubky-protocol/getting-started/
+
 
 ## Resources
 
@@ -60,7 +84,7 @@ Websites:
 
 Github and packages:
 
-- https://github.com/pubky/pubky-core/ - Pubky SDK.
+- https://github.com/pubky/pubky-homeserver/ - Pubky SDK.
 - https://www.npmjs.com/package/@synonymdev/pubky - JavaScript SDK package.
 - https://crates.io/crates/pubky - Rust SDK crate.
 - https://github.com/pubky/ - All Pubky repositories.
@@ -69,5 +93,5 @@ Other live Pubky apps for reference:
 
 - https://eventky.app - Event app built on Pubky.
 - https://mapky.app - Map app built on Pubky.
-- https://payky.app - Payment app built on Pubky.
+- https://drive.pubky.app/ - Google Drive like Application
 - https://mypubky.com - Pubky social/profile app.
