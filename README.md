@@ -10,6 +10,8 @@ Bandwidth will be limited during the workshop. Install the tools and start these
 
 ## Preload Early
 
+Do this as early as possible. This is the largest shared download.
+
 ### 1. Pull Pubky Docker Images
 
 Runs the local testnet and Homeserver.
@@ -21,8 +23,6 @@ Runs the local testnet and Homeserver.
 git clone https://github.com/pubky/pubky-docker.git && cd pubky-docker && cp .env-sample .env
 docker compose up homeserver -d
 ```
-
-Do this as early as possible. This is the largest shared download.
 
 ### 2. Download App Templates
 
@@ -73,7 +73,7 @@ https://pubky.org/explore/pubky-protocol/getting-started/
 
 Tools:
 
-- https://github.com/pubky/pubky-explorer - Pubky Explorer to inspect the data on your homeserver.
+- https://explorer.pubky.app/testnet/ - Pubky Explorer to inspect the data on your homeserver.
 - https://github.com/pubky/pubky-app-templates - App templates directory.
 
 Websites:
@@ -81,6 +81,7 @@ Websites:
 - https://pubky.org - Main Pubky documentation and concepts.
 - https://pubky.app - Social media platform built on Pubky and reference implementation.
 - https://pubky.tech - Awesome list of Pubky projects, tools, and examples.
+- https://pkdns.net — PKDNS public resolver
 
 Github and packages:
 
@@ -91,7 +92,9 @@ Github and packages:
 
 Other live Pubky apps for reference:
 
+- https://uploadky.vercel.app/ - File sharing
 - https://eventky.app - Event app built on Pubky.
 - https://mapky.app - Map app built on Pubky.
 - https://drive.pubky.app/ - Google Drive like Application
 - https://mypubky.com - Pubky social/profile app.
+- https://github.com/jvsena42/loopky - Flashcard Android App
