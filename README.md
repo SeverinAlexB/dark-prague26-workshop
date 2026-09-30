@@ -35,8 +35,34 @@ The template already implements login & basic file operations. It can store priv
 
 Run it with `npm run dev`.
 
-Use the Pubky Ring Simulator to manage your identity: https://simulator.pubkyring.app/
+### 3. Sign In with the Pubky Ring Simulator
 
+The simulator stands in for Pubky Ring during local development. It manages your test identity and authorizes your app, which receives a session without handling your identity's private key.
+
+Keep the local testnet running, then:
+
+1. Open your running app in the browser.
+2. Under **Sign in with Pubky Ring**, click **Copy link**.
+3. Open the [Pubky Ring Simulator](https://simulator.pubkyring.app/) in another tab.
+4. If prompted, click **Prompt permission** and allow access to local services in your browser.
+5. Select **Shortcut** and **paste** the copied link into **Auth link**. Pasting starts authentication automatically.
+6. Return to your app. It signs in automatically once the simulator approves the request.
+
+Use **Regular** mode when you want to create and select identities yourself before authorizing an app.
+
+### 4. Check That Your App Works
+
+Before changing the template, try saving and reading a file:
+
+1. In your signed-in app, enter a **Title** and **Body**, then click **Create**.
+2. Reload the app. You should still be signed in, and your file should appear in **Files**. Click **Edit** to check that its title and body were saved.
+3. Copy the public key displayed in your app and open the [testnet Pubky Explorer](https://explorer.pubky.app/testnet/).
+4. Allow access to local services if your browser asks. Paste your public key into Explorer and click **Explore**.
+5. Browse to `/pub/template/files/` and open the JSON file. You should see the title and body you entered.
+
+Your file is stored on your identity's Homeserver, and Explorer can read it independently of your app. These example files are public, so use sample data. Keep the local testnet running throughout this check.
+
+Once this works, you have a working starting point for building your own app.
 
 ## AI Development
 
@@ -56,12 +82,6 @@ Fetch the docs and help me build with Pubky:
 - Compact (~6k tokens): https://pubky.org/llms-small.txt
 ```
 
-### Local Signer / Identity Manager
-
-Identities / User Accounts are managed by a signer. Use the Pubky Ring simulator to create identities and authorize applications
-
-https://simulator.pubkyring.app/
-
 ## Manual Development
 
 Checkout this guide:
@@ -70,6 +90,8 @@ https://pubky.org/explore/pubky-protocol/getting-started/
 
 
 ## Resources
+
+> More on https://pubky.org/resources/
 
 Tools:
 
