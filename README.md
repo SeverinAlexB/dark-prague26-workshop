@@ -1,11 +1,14 @@
 # Dark Prague Workshop Resources
 
-Bandwidth will be limited during the workshop. Install the tools and start these downloads early.
+> Bandwidth will be limited during the workshop. Install the tools and start these downloads early.
 
-## Install
+
+
+## Requirements
 
 - Docker: https://docs.docker.com/get-started/get-docker/
-- Node.js and npm: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/
+- Docker Compose: https://docs.docker.com/compose/install/
+- Node.js 22.12+ and npm: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/
 - Git, only for `git clone` commands: https://git-scm.com/downloads
 
 ## Preload Early
@@ -31,7 +34,9 @@ npx tiged pubky/pubky-app-templates/basic-pubky-app my-pubky-app
 (cd my-pubky-app && npm install)
 ```
 
-The template already implements login & basic file operations. It can store private and public data.
+The template includes sign-in and basic file operations. Its example files are stored under `/pub/template/` and are publicly readable.
+
+Pubky also supports access-controlled private storage under `/priv/`. To use it, change the app's storage paths and requested capabilities. Private storage requires an authorized session, but it does not encrypt the data: the Homeserver operator can still read its contents. See the [Private Storage guide](https://pubky.org/explore/pubky-protocol/private-storage/) for details.
 
 Run it with `npm run dev`.
 
@@ -72,7 +77,7 @@ Best to use your AI agent to build a small app. For example:
 This is an example app that provides login and file read/write. I want to turn this into a photo library. Propose how to do this. Feel free to ask clarifying questions.
 ```
 
-Then add this small section to give your AI all the information it needs to build on Pubky:
+Add this small section to give your AI all the information it needs to build on Pubky:
 
 ```
 Pubky: open protocol for key-based, censorship-resistant web apps. Public key identity, homeserver storage, Mainline DHT discovery over HTTP/REST.
