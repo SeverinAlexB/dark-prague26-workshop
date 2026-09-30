@@ -1,5 +1,7 @@
 # Dark Prague Workshop Resources
 
+By the end of this workshop, you will have built a small Pubky app that signs in with a public-key identity, saves and reads data on the user's Homeserver, and keeps that data available after an app reload. You will also inspect the app's public files independently with Pubky Explorer.
+
 > Bandwidth will be limited during the workshop. Install the tools and start these downloads early.
 
 
@@ -69,9 +71,9 @@ Your file is stored on your identity's Homeserver, and Explorer can read it inde
 
 Once this works, you have a working starting point for building your own app.
 
-## AI Development
+## AI-Assisted Development (Workshop Path)
 
-Best to use your AI agent to build a small app. For example:
+Once the template passes the checks above, open `my-pubky-app` in your editor and use your AI coding agent to turn it into a small app. Start with a prompt like this:
 
 ```
 This is an example app that provides login and file read/write. I want to turn this into a photo library. Propose how to do this. Feel free to ask clarifying questions.
@@ -87,9 +89,9 @@ Fetch the docs and help me build with Pubky:
 - Compact (~6k tokens): https://pubky.org/llms-small.txt
 ```
 
-## Manual Development
+## Manual Development (Optional)
 
-Checkout this guide:
+If you prefer to write the code yourself or want to learn the SDK step by step after the workshop, follow this guide:
 
 https://pubky.org/explore/pubky-protocol/getting-started/
 
