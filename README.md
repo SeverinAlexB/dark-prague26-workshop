@@ -126,4 +126,4 @@ Other live Pubky apps for reference:
 - https://mapky.app - Map app built on Pubky.
 - https://drive.pubky.app/ - Google Drive like Application
 - https://mypubky.com - Pubky social/profile app.
-- https://github.com/jvsena42/loopky - Flashcard Android App
+- https://loopky.app/ - Flashcard Android App
