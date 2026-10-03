@@ -22,7 +22,7 @@ Do this as early as possible. This is the largest shared download.
 Runs the local testnet and Homeserver.
 
 - Repo: https://github.com/pubky/pubky-docker
-- Docs: https://pubky.org/explore/technologies/pubky-docker/
+- Docs: https://pubky.org/pubky-docker/
 
 ```bash
 git clone https://github.com/pubky/pubky-docker.git && cd pubky-docker && cp .env-sample .env
@@ -38,7 +38,7 @@ npx tiged pubky/pubky-app-templates/basic-pubky-app my-pubky-app
 
 The template includes sign-in and basic file operations. Its example files are stored under `/pub/template/` and are publicly readable.
 
-Pubky also supports access-controlled private storage under `/priv/`. To use it, change the app's storage paths and requested capabilities. Private storage requires an authorized session, but it does not encrypt the data: the Homeserver operator can still read its contents. See the [Private Storage guide](https://pubky.org/explore/pubky-protocol/private-storage/) for details.
+Pubky also supports access-controlled private storage under `/priv/`. To use it, change the app's storage paths and requested capabilities. Private storage requires an authorized session, but it does not encrypt the data: the Homeserver operator can still read its contents. See the [Private Storage guide](https://pubky.org/private-storage/) for details.
 
 Run it with `npm run dev`.
 
@@ -93,7 +93,7 @@ Fetch the docs and help me build with Pubky:
 
 If you prefer to write the code yourself or want to learn the SDK step by step after the workshop, follow this guide:
 
-https://pubky.org/explore/pubky-protocol/getting-started/
+https://pubky.org/developer-guide/
 
 
 ## Resources
